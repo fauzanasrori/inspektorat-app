@@ -1,17 +1,17 @@
 "use client";
 
-import { menuItems } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { menuItems } from "@/constants";
+import AccountToggle from "./accountToggle";
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="px-4 py-6 bg-white border-r border-gray-200">
+    <div className="px-4 py-6 bg-white border-r border-gray-200 relative">
       <div className="overflow-y-scroll sticky top-4 h-[calc(100vh-32px-48px-px)]">
-        <div className="space-y-1">
+        <div className="space-y-2">
           <span className="text-xs text-gray-500 font-semibold block mb-4">
             Menu
           </span>
@@ -40,6 +40,7 @@ export default function Sidebar() {
           })}
         </div>
       </div>
+      <AccountToggle />
     </div>
   );
 }

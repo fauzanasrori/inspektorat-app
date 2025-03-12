@@ -1,6 +1,7 @@
 "use client";
 
 import { employees as data } from "@/constants";
+import { Search } from "lucide-react";
 import { Trash2, ExternalLink, Pencil, PlusCircle } from "lucide-react";
 import { useState } from "react";
 
@@ -33,13 +34,16 @@ export default function Page() {
         <div className="mb-4 flex items-center justify-between">
           <h1 className="text-xl tracking-tight">Pegawai</h1>
           <div className="flex gap-4 items-center">
-            <input
-              type="text"
-              placeholder="Search nama, nip ..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-xs py-2.5 px-4 text-sm text-gray-700 border border-gray-300 rounded-md outline-none "
-            />
+            <div className="px-4 py-2.5 w-xs border border-gray-300 rounded-md flex items-center gap-2">
+              <Search size={22} className="text-gray-500" />
+              <input
+                type="text"
+                placeholder="Search nama, nip ..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className=" text-sm text-gray-700 outline-none "
+              />
+            </div>
             <button className="text-white text-sm font-medium bg-blue-500 px-4 py-2.5 rounded-md flex items-center gap-2">
               <PlusCircle /> Tambah Pegawai
             </button>

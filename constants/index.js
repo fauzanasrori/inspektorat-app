@@ -92,3 +92,51 @@ export const employees = [
     status: "Aktif",
   },
 ];
+
+export const dataPelatihan = [
+  {
+    id: 1,
+    nama: "Pelatihan Audit Internal",
+    tanggal: "2025-04-10",
+    durasi: "3 Hari",
+    lokasi: "Jakarta",
+    status: "Selesai",
+    peserta: 25,
+  },
+  {
+    id: 2,
+    nama: "Manajemen Risiko",
+    tanggal: "2025-05-05",
+    durasi: "2 Hari",
+    lokasi: "Bandung",
+    status: "Sedang Berlangsung",
+    peserta: 18,
+  },
+  {
+    id: 3,
+    nama: "Teknik Investigasi Keuangan",
+    tanggal: "2025-06-15",
+    durasi: "5 Hari",
+    lokasi: "Surabaya",
+    status: "Akan Datang",
+    peserta: 30,
+  },
+  {
+    id: 4,
+    nama: "Analisis Data untuk Audit",
+    tanggal: "2025-07-20",
+    durasi: "4 Hari",
+    lokasi: "Yogyakarta",
+    status: "Akan Datang",
+    peserta: 22,
+  },
+  {
+    id: 5,
+    nama: "Pencegahan Fraud di Instansi Pemerintah",
+    tanggal: "2025-08-12",
+    durasi: "3 Hari",
+    lokasi: "Jakarta",
+    status: "Akan Datang",
+    peserta: 28,
+  },
+];
