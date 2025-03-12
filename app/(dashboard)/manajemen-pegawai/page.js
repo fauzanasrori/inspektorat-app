@@ -1,6 +1,7 @@
 "use client";
 
 import { employees as data } from "@/constants";
+import { Trash2, ExternalLink, Pencil, PlusCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Page() {
@@ -27,35 +28,20 @@ export default function Page() {
   };
 
   return (
-    <div>
-      <div className="mb-10">
-        <h1 className="mb-4">Manajemen Pegawai</h1>
-        <ul>
-          <li>Data Pegawai (Tambah, Edit, Hapus, Lihat Detail)</li>
-          <li>
-            Riwayat Pelatihan Pegawai (Melihat pelatihan yang pernah diikuti
-            pegawai)
-          </li>
-          <li>
-            Kompetensi & Keterampilan (Daftar kompetensi pegawai berdasarkan
-            jabatan)
-          </li>
-        </ul>
-      </div>
-
+    <div className="space-y-4">
       <div className="p-6 rounded-xl shadow-md bg-white">
         <div className="mb-4 flex items-center justify-between">
-          <h1 className="text-2xl tracking-tight">Pegawai</h1>
+          <h1 className="text-xl tracking-tight">Pegawai</h1>
           <div className="flex gap-4 items-center">
             <input
               type="text"
               placeholder="Search nama, nip ..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-xs py-2 px-4 text-sm text-gray-700 border border-gray-300 rounded-md outline-none "
+              className="w-xs py-2.5 px-4 text-sm text-gray-700 border border-gray-300 rounded-md outline-none "
             />
-            <button className="text-white font-medium bg-blue-500 px-4 py-1.5 rounded-md">
-              + Tambah Pegawai
+            <button className="text-white text-sm font-medium bg-blue-500 px-4 py-2.5 rounded-md flex items-center gap-2">
+              <PlusCircle /> Tambah Pegawai
             </button>
           </div>
         </div>
@@ -68,7 +54,7 @@ export default function Page() {
               <th className="table-header">Unit Kerja</th>
               <th className="table-header">Kompetensi</th>
               <th className="table-header">Status</th>
-              <th className="table-header w-[178px]">Action</th>
+              <th className="table-header w-[100px]">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -85,21 +71,22 @@ export default function Page() {
                       {employee.status}
                     </span>
                   </td>
-                  <td className="text-end">
-                    <button className="px-2 py-1 text-sm text-gray-700 rounded-md border border-gray-300 hover:border-gray-400">
-                      Edit
-                    </button>
-                    <button
+                  <td className="text-end flex justify-center gap-2 pt-4">
+                    <Pencil
+                      size={18}
+                      className="text-orange-500 cursor-pointer"
+                    />
+                    <Trash2
+                      size={18}
+                      className="text-red-500 cursor-pointer"
                       onClick={() => {
                         handleDelete(employee.id);
                       }}
-                      className="px-2 py-1 ml-2 text-sm text-gray-700 rounded-md border border-gray-300 hover:border-gray-400"
-                    >
-                      Hapus
-                    </button>
-                    <button className="px-2 py-1 ml-2 text-sm text-gray-700 rounded-md border border-gray-300 hover:border-gray-400">
-                      Detail
-                    </button>
+                    />
+                    <ExternalLink
+                      size={18}
+                      className="text-emerald-500 cursor-pointer"
+                    />
                   </td>
                 </tr>
               ))
@@ -112,19 +99,25 @@ export default function Page() {
             )}
           </tbody>
         </table>
-
-        <div className="flex justify-end">
-          <div className="flex gap-4 items-center text-gray-700 text-xs mt-4">
-            <button className="p-2 rounded-md border border-gray-300">
-              Prev
-            </button>
-            <span>Page 1 of 5</span>
-            <button className="p-2 rounded-md border border-gray-300">
-              Next
-            </button>
-          </div>
+      </div>
+      <div className="flex justify-end">
+        <div className="flex gap-2 items-center text-gray-700 text-xs rounded-xl bg-white shadow-md p-2">
+          <button className="px-4 py-2.5">Prev</button>
+          <span>Page 1 of 5</span>
+          <button className="px-4 py-2.5">Next</button>
         </div>
       </div>
+      <ul>
+        <li>Data Pegawai (Tambah, Edit, Hapus, Lihat Detail)</li>
+        <li>
+          Riwayat Pelatihan Pegawai (Melihat pelatihan yang pernah diikuti
+          pegawai)
+        </li>
+        <li>
+          Kompetensi & Keterampilan (Daftar kompetensi pegawai berdasarkan
+          jabatan)
+        </li>
+      </ul>
     </div>
   );
 }

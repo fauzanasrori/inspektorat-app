@@ -1,7 +1,6 @@
 export default function Page() {
   return (
     <div>
-      <h1 className="mb-4">Laporan & Rekapitulasi</h1>
       <ul>
         <li>Laporan Pegawai (Daftar pegawai & status pelatihannya)</li>
         <li>

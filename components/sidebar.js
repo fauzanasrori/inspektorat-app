@@ -1,6 +1,7 @@
 "use client";
 
 import { menuItems } from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,14 +22,17 @@ export default function Sidebar() {
               <Link
                 key={label}
                 href={href}
-                className={`flex items-center justify-start font-medium gap-4 w-full rounded-md p-3 text-sm transition-[bos-shadow,_background-color,_color] ${
+                className={`flex items-center justify-start font-medium gap-2 w-full rounded-md p-3 text-sm transition-[bos-shadow,_background-color,_color] ${
                   isActive
                     ? "bg-blue-500 text-white shadow"
                     : "hover:bg-gray-200 text-gray-700 shadow-none"
                 }`}
               >
                 {Icon && (
-                  <Icon size={18} className={isActive ? "text-white" : ""} />
+                  <Icon
+                    size={18}
+                    className={`${isActive ? "text-white" : ""}`}
+                  />
                 )}
                 <span className="capitalize">{label}</span>
               </Link>

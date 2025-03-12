@@ -1,51 +1,42 @@
+import {
+  House,
+  ClipboardList,
+  Users,
+  GraduationCap,
+  Settings,
+  FileText,
+} from "lucide-react";
+
 export const menuItems = [
   {
     label: "dashboard",
     href: "/dashboard",
-    icon: "",
+    Icon: House,
   },
   {
     label: "manajemen pegawai",
     href: "/manajemen-pegawai",
-    icon: "",
+    Icon: Users,
   },
   {
     label: "manajemen pelatihan",
     href: "/manajemen-pelatihan",
-    icon: "",
+    Icon: ClipboardList,
   },
   {
     label: "rekomendasi pelatihan",
     href: "/rekomendasi-pelatihan",
-    icon: "",
+    Icon: GraduationCap,
   },
   {
     label: "laporan & rekapitulasi",
     href: "/laporan-rekapitulasi",
-    icon: "",
+    Icon: FileText,
   },
   {
     label: "pengaturan & hak akses",
     href: "/pengaturan",
-    icon: "",
-  },
-];
-
-export const ringkasan = [
-  {
-    label: "total pegawai",
-    value: "100",
-    icon: "",
-  },
-  {
-    label: "total peserta",
-    value: "352",
-    icon: "",
-  },
-  {
-    label: "peserta aktif",
-    value: "217",
-    icon: "",
+    Icon: Settings,
   },
 ];
 
