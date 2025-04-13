@@ -78,7 +78,7 @@ Proyek ini dikembangkan sebagai bagian dari kegiatan PKL (Praktek Kerja Lapangan
 oleh **Moh Fauzan Asrori**, mahasiswa aktif dengan minat di bidang sistem informasi & pengembangan web modern.
 
 - 📧 Email: m45120121@email.com
-- 📱 WhatsApp: [088980798945](wa.me/+6288980798945)
+- 📱 WhatsApp: +6288980798945
 
 ---
 
