@@ -1,3 +1,50 @@
+# 📊 Sistem Rekapitulasi Pegawai & Pemilihan Pelatihan
+
+Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merekap data pegawai serta mempermudah proses pemilihan pelatihan berdasarkan kebutuhan dan kriteria yang ditentukan.
+
+---
+
+## 🚀 Fitur Utama
+
+- 📋 Rekapitulasi data pegawai
+- 🧠 Penilaian kebutuhan pelatihan per pegawai
+- 🗂️ Pemilihan jenis pelatihan berdasarkan kriteria tertentu
+- 📅 Manajemen jadwal pelatihan
+- 🔐 Login untuk admin dan pengguna internal
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+| Teknologi           | Keterangan                             |
+| ------------------- | -------------------------------------- |
+| Next.js             | Framework utama frontend               |
+| Tailwind CSS        | Styling modern & responsive            |
+| PostgreSQL          | Basis data utama                       |
+| Supabase (opsional) | Jika digunakan untuk auth atau storage |
+| Vercel / Netlify    | Untuk hosting (jika online)            |
+
+---
+
+## 📸 Cuplikan Tampilan (Screenshots)
+
+> _(Tambahkan gambar hasil tampilan di folder `assets/` lalu tampilkan di sini)_
+
+![Dashboard](public/assets/dashboard.png)
+![Daftar Pelatihan](public/assets/daftarpelatihan.png)
+
+---
+
+## ⚙️ Cara Menjalankan Project
+
+1. Clone repo ini:
+
+````bash
+git clone git@github.com:fauzanasrori/inspektorat-app.git
+cd inspektorat-app
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -12,7 +59,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
