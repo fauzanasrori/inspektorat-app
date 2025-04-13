@@ -30,7 +30,10 @@ Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merek
 
 > _(Tambahkan gambar hasil tampilan di folder `assets/` lalu tampilkan di sini)_
 
+#### Dashboard
 ![Dashboard](public/assets/dashboard.png)
+
+#### Daftar Pelatihan
 ![Daftar Pelatihan](public/assets/daftarpelatihan.png)
 
 ---
