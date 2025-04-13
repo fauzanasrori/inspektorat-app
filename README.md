@@ -84,4 +84,5 @@ oleh **Moh Fauzan Asrori**, mahasiswa aktif dengan minat di bidang sistem inform
 
 ## 📄 Lisensi
 
-Proyek ini dibuat untuk kebutuhan internal Inspektorat dan tidak untuk distribusi publik. Untuk penggunaan atau pengembangan lebih lanjut, silakan hubungi pengembang.
+Proyek ini menggunakan lisensi [MIT License](LICENSE).  
+Silakan digunakan, dimodifikasi, dan disebarluaskan dengan mencantumkan atribusi yang sesuai.
