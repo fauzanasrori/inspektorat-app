@@ -5,9 +5,29 @@ import { Search } from "lucide-react";
 import { Trash2, ExternalLink, Pencil, PlusCircle } from "lucide-react";
 import { useState } from "react";
 
+const ITEMS_PER_PAGE = 7;
+
 export default function Page() {
   const [employees, setEmployees] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Filter data pegawai berdasarkan input pencarian
+  const filteredEmployee = employees.filter((employee) =>
+    `${employee.nama} ${employee.nip} ${employee.jabatan} ${employee.unitKerja} ${employee.status} ${employee.kompetensi}`
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
+  );
+
+  // Hitung total halaman
+  const totalPages = Math.ceil(filteredEmployee.length / ITEMS_PER_PAGE);
+
+  // Ambil data sesuai halaman yang dipilih
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentEmployees = filteredEmployee.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   // Styling satus berdasarkan aktif
   const getStatusStyle = (status) => {
@@ -15,13 +35,6 @@ export default function Page() {
       ? "bg-green-100 text-green-700 px-2 py-1 rounded-md"
       : "bg-red-100 text-red-700 px-2 py-1 rounded-md";
   };
-
-  // Filter data pegawai berdasarkan input pencarian
-  const filteredEmployee = employees.filter((employee) =>
-    `${employee.nama} ${employee.nip} ${employee.jabatan} ${employee.unitKerja} ${employee.status}`
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase())
-  );
 
   const handleDelete = (id) => {
     const updatedEmployees = employees.filter((employee) => employee.id !== id);
@@ -41,10 +54,10 @@ export default function Page() {
                 placeholder="Search nama, nip ..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className=" text-sm text-gray-700 outline-none "
+                className=" text-sm text-gray-700 outline-none w-full"
               />
             </div>
-            <button className="text-white text-sm font-medium bg-blue-500 px-4 py-2.5 rounded-md flex items-center gap-2">
+            <button className="text-white text-sm font-medium bg-blue-500 hover:bg-blue-600 px-4 py-2.5 rounded-md flex items-center gap-2">
               <PlusCircle /> Tambah Pegawai
             </button>
           </div>
@@ -62,8 +75,8 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            {filteredEmployee.length > 0 ? (
-              filteredEmployee.map((employee) => (
+            {currentEmployees.length > 0 ? (
+              currentEmployees.map((employee) => (
                 <tr key={employee.nip}>
                   <td className="table-item">{employee.nama}</td>
                   <td className="table-item">{employee.nip}</td>
@@ -106,9 +119,25 @@ export default function Page() {
       </div>
       <div className="flex justify-end">
         <div className="flex gap-2 items-center text-gray-700 text-xs rounded-xl bg-white shadow-md p-2">
-          <button className="px-4 py-2.5">Prev</button>
-          <span>Page 1 of 5</span>
-          <button className="px-4 py-2.5">Next</button>
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className="px-4 py-2.5"
+          >
+            Prev
+          </button>
+          <span>
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
+            disabled={currentPage === totalPages}
+            className="px-4 py-2.5"
+          >
+            Next
+          </button>
         </div>
       </div>
       <ul>
