@@ -1,6 +1,3 @@
-## 💼 Struktur Saran README.md Proyek Inspektorat
-
-````md
 # 📊 Sistem Rekapitulasi Pegawai & Pemilihan Pelatihan
 
 Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merekap data pegawai serta mempermudah proses pemilihan pelatihan berdasarkan kebutuhan dan kriteria yang ditentukan.
@@ -47,7 +44,6 @@ Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merek
 git clone https://github.com/fauzanasrori/rekap-pegawai-inspektorat.git
 cd rekap-pegawai-inspektorat
 ```
-````
 
 2. Install dependencies:
 
@@ -79,18 +75,13 @@ http://localhost:3000
 ## 👨‍💻 Pengembang
 
 Proyek ini dikembangkan sebagai bagian dari kegiatan PKL (Praktek Kerja Lapangan)  
-oleh **Fauzan Asrori**, mahasiswa aktif dengan minat di bidang sistem informasi & pengembangan web modern.
+oleh **Moh Fauzan Asrori**, mahasiswa aktif dengan minat di bidang sistem informasi & pengembangan web modern.
 
-- 📧 Email: fauzan@email.com
-- 🌐 LinkedIn: [linkedin.com/in/fauzanasrori](https://linkedin.com/in/fauzanasrori)
-- 📱 WhatsApp: 08xxxxxxxxx
+- 📧 Email: m45120121@email.com
+- 📱 WhatsApp: [088980798945](wa.me/+6288980798945)
 
 ---
 
 ## 📄 Lisensi
 
 Proyek ini dibuat untuk kebutuhan internal Inspektorat dan tidak untuk distribusi publik. Untuk penggunaan atau pengembangan lebih lanjut, silakan hubungi pengembang.
-
-```
-
-```
