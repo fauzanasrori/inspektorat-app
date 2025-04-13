@@ -41,8 +41,8 @@ Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merek
 1. Clone repo ini:
 
 ```bash
-git clone https://github.com/fauzanasrori/rekap-pegawai-inspektorat.git
-cd rekap-pegawai-inspektorat
+git clone https://github.com/fauzanasrori/inspektorat-app.git
+cd inspektorat-app
 ```
 
 2. Install dependencies:
