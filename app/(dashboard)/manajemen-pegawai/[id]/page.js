@@ -42,7 +42,7 @@ export default function Page() {
 
       <div className="grid grid-cols-2 gap-8">
         <div className="space-y-8">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm">
+          <div className="border border-gray-200 p-8 rounded-xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-blue-100 rounded-lg">
                 <User className="text-blue-600" size={24} />
@@ -83,7 +83,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl shadow-sm">
+          <div className="border border-gray-200 p-8 rounded-xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-purple-100 rounded-lg">
                 <Briefcase className="text-purple-600" size={24} />
@@ -112,7 +112,7 @@ export default function Page() {
         </div>
 
         <div className="space-y-8">
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-sm">
+          <div className="border border-gray-200 p-8 rounded-xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-emerald-100 rounded-lg">
                 <Award className="text-emerald-600" size={24} />
@@ -133,7 +133,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl shadow-sm">
+          <div className="border border-gray-200 p-8 rounded-xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-amber-100 rounded-lg">
                 <BookOpen className="text-amber-600" size={24} />
