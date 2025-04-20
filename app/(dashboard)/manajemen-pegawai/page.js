@@ -3,7 +3,7 @@
 import { employees as data } from "@/constants";
 import { Search, Trash2, Pencil, PlusCircle, Eye } from "lucide-react";
 import { useState } from "react";
-import EmployeeDrawer from "@/components/employeeDrawer";
+import EmployeeDrawer from "@/app/(dashboard)/manajemen-pegawai/components/employeeDrawer";
 import Link from "next/link";
 
 const ITEMS_PER_PAGE = 7;
@@ -120,7 +120,9 @@ export default function Page() {
                     <td className="table-item py-4">{employee.unitKerja}</td>
                     <td className="table-item py-4">{employee.kompetensi}</td>
                     <td className="table-item py-4">
-                      <span className={`${getStatusStyle(employee.status)}`}>
+                      <span
+                        className={`${getStatusStyle(employee.status)} text-sm`}
+                      >
                         {employee.status}
                       </span>
                     </td>

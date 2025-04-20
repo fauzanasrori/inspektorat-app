@@ -23,11 +23,11 @@ export const menuItems = [
     href: "/manajemen-pelatihan",
     Icon: ClipboardList,
   },
-  {
-    label: "rekomendasi pelatihan",
-    href: "/rekomendasi-pelatihan",
-    Icon: GraduationCap,
-  },
+  // {
+  //   label: "rekomendasi pelatihan",
+  //   href: "/rekomendasi-pelatihan",
+  //   Icon: GraduationCap,
+  // },
   {
     label: "laporan & rekapitulasi",
     href: "/laporan-rekapitulasi",

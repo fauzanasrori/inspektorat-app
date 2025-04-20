@@ -76,14 +76,14 @@ export default function TopBar() {
   const notificationCount = upcomingTrainings.length;
 
   return (
-    <div className="mb-6 bg-white rounded-xl p-6 shadow-sm">
+    <div className="bg-white border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-sm text-gray-500 mb-1">Hi Fauzan Asrori</h2>
           <h1 className="text-2xl font-semibold text-gray-800">{pageTitle}</h1>
         </div>
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 text-gray-600">
+          <div className="flex items-center gap-2 text-gray-600 bg-gray-50 px-4 py-2 rounded-lg">
             <CalendarDays size={18} className="text-blue-500" />
             <span className="text-sm">{date}</span>
           </div>
@@ -91,7 +91,7 @@ export default function TopBar() {
           <div className="relative" ref={notificationRef}>
             <button
               onClick={() => setIsNotificationOpen(!isNotificationOpen)}
-              className="relative w-10 h-10 flex items-center justify-center rounded-full bg-blue-50 text-blue-500 hover:bg-blue-100 transition-colors duration-200"
+              className="relative w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
             >
               <Bell size={18} />
               {notificationCount > 0 && (

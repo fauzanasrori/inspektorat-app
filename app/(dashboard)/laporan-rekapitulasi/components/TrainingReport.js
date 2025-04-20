@@ -1,52 +1,42 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
-export default function TabelPegawai({ employees }) {
-  const getStatusStyle = (status) => {
-    return status === "Aktif"
-      ? "bg-green-100 text-green-700 px-2 py-1 rounded-md text-xs font-medium"
-      : "bg-red-100 text-red-700 px-2 py-1 rounded-md text-xs font-medium";
-  };
-
+export default function TrainingReport({ filteredTrainings }) {
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md">
-      <div className="flex items-start justify-between mb-6">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight">
-            Daftar Pegawai
-          </h1>
-          <p className="text-sm text-gray-500 mt-1">Daftar pegawai terbaru</p>
+    <div className="bg-white rounded-xl shadow-sm p-6">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="p-3 bg-emerald-100 rounded-lg">
+          <BookOpen className="text-emerald-600" size={24} />
         </div>
-        <Link
-          href="/manajemen-pegawai"
-          className="text-white text-sm font-medium bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md flex items-center gap-2 transition-colors duration-200"
-        >
-          Lihat Semua
-          <ChevronRight size={16} />
-        </Link>
+        <h2 className="text-xl font-semibold text-gray-800">
+          Laporan Pelatihan
+        </h2>
+        <span className="ml-auto text-sm text-gray-500">
+          {filteredTrainings.length} Pelatihan
+        </span>
       </div>
-
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
-                Nama Pegawai
+                Nama Pelatihan
               </th>
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
-                NIP
+                Kategori
               </th>
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
-                Jabatan
+                Tanggal
               </th>
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
-                Unit Kerja
+                Durasi
               </th>
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
-                Kompetensi
+                Lokasi
+              </th>
+              <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
+                Jumlah Peserta
               </th>
               <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">
                 Status
@@ -54,29 +44,40 @@ export default function TabelPegawai({ employees }) {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {employees.slice(0, 5).map((employee) => (
+            {filteredTrainings.map((pelatihan) => (
               <tr
-                key={employee.nip}
+                key={pelatihan.id}
                 className="hover:bg-gray-50 transition-colors duration-200"
               >
                 <td className="py-4 px-4 text-sm text-gray-900">
-                  {employee.nama}
+                  {pelatihan.nama}
                 </td>
                 <td className="py-4 px-4 text-sm text-gray-500">
-                  {employee.nip}
+                  {pelatihan.kategori}
                 </td>
                 <td className="py-4 px-4 text-sm text-gray-500">
-                  {employee.jabatan}
+                  {pelatihan.tanggal}
                 </td>
                 <td className="py-4 px-4 text-sm text-gray-500">
-                  {employee.unitKerja}
+                  {pelatihan.durasi}
                 </td>
                 <td className="py-4 px-4 text-sm text-gray-500">
-                  {employee.kompetensi}
+                  {pelatihan.lokasi}
+                </td>
+                <td className="py-4 px-4 text-sm text-gray-500">
+                  {pelatihan.peserta}
                 </td>
                 <td className="py-4 px-4">
-                  <span className={getStatusStyle(employee.status)}>
-                    {employee.status}
+                  <span
+                    className={`${
+                      pelatihan.status === "Selesai"
+                        ? "bg-green-100 text-green-700"
+                        : pelatihan.status === "Sedang Berlangsung"
+                        ? "bg-blue-100 text-blue-700"
+                        : "bg-yellow-100 text-yellow-700"
+                    } px-2 py-1 rounded-md text-xs`}
+                  >
+                    {pelatihan.status}
                   </span>
                 </td>
               </tr>

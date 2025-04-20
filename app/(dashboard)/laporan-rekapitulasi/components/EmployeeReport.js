@@ -1,34 +1,19 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { Users } from "lucide-react";
 
-export default function TabelPegawai({ employees }) {
-  const getStatusStyle = (status) => {
-    return status === "Aktif"
-      ? "bg-green-100 text-green-700 px-2 py-1 rounded-md text-xs font-medium"
-      : "bg-red-100 text-red-700 px-2 py-1 rounded-md text-xs font-medium";
-  };
-
+export default function EmployeeReport({ filteredEmployees }) {
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md">
-      <div className="flex items-start justify-between mb-6">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight">
-            Daftar Pegawai
-          </h1>
-          <p className="text-sm text-gray-500 mt-1">Daftar pegawai terbaru</p>
+    <div className="bg-white rounded-xl shadow-sm p-6">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="p-3 bg-blue-100 rounded-lg">
+          <Users className="text-blue-600" size={24} />
         </div>
-        <Link
-          href="/manajemen-pegawai"
-          className="text-white text-sm font-medium bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md flex items-center gap-2 transition-colors duration-200"
-        >
-          Lihat Semua
-          <ChevronRight size={16} />
-        </Link>
+        <h2 className="text-xl font-semibold text-gray-800">Laporan Pegawai</h2>
+        <span className="ml-auto text-sm text-gray-500">
+          {filteredEmployees.length} Pegawai
+        </span>
       </div>
-
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
@@ -54,7 +39,7 @@ export default function TabelPegawai({ employees }) {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {employees.slice(0, 5).map((employee) => (
+            {filteredEmployees.map((employee) => (
               <tr
                 key={employee.nip}
                 className="hover:bg-gray-50 transition-colors duration-200"
@@ -75,7 +60,13 @@ export default function TabelPegawai({ employees }) {
                   {employee.kompetensi}
                 </td>
                 <td className="py-4 px-4">
-                  <span className={getStatusStyle(employee.status)}>
+                  <span
+                    className={`${
+                      employee.status === "Aktif"
+                        ? "bg-green-100 text-green-700"
+                        : "bg-red-100 text-red-700"
+                    } px-2 py-1 rounded-md text-sm`}
+                  >
                     {employee.status}
                   </span>
                 </td>

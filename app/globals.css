@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
-  button {
-    @apply cursor-pointer;
+  button,
+  select {
+    cursor: pointer;
   }
 }
 

@@ -3,17 +3,28 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menuItems } from "@/constants";
-import AccountToggle from "./accountToggle";
+import { House } from "lucide-react";
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="px-4 py-6 bg-white border-r border-gray-200 relative">
-      <div className="overflow-y-scroll sticky top-4 h-[calc(100vh-32px-48px-px)]">
+    <div className="px-4 py-6 bg-white border-r border-gray-200">
+      <div className="overflow-y-scroll h-[calc(100vh-32px)]">
         <div className="space-y-2">
-          <span className="text-xs text-gray-500 font-semibold block mb-4">
-            Menu
+          <div className="flex items-center gap-2 mb-8">
+            <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+              <House className="text-white" size={20} />
+            </div>
+            <div>
+              <span className="text-sm font-semibold text-gray-800">
+                Inspektorat
+              </span>
+              <p className="text-xs text-gray-500">Sistem Informasi</p>
+            </div>
+          </div>
+          <span className="text-xs text-gray-500 font-semibold block mb-4 px-2">
+            Menu Utama
           </span>
           {menuItems.map(({ label, Icon, href }) => {
             const isActive = pathname.startsWith(href);
@@ -22,16 +33,16 @@ export default function Sidebar() {
               <Link
                 key={label}
                 href={href}
-                className={`flex items-center justify-start font-medium gap-2 w-full rounded-md p-3 text-sm transition-[bos-shadow,_background-color,_color] ${
+                className={`flex items-center justify-start font-medium gap-3 w-full rounded-lg p-3 text-sm ${
                   isActive
-                    ? "bg-blue-500 text-white shadow"
-                    : "hover:bg-gray-200 text-gray-700 shadow-none"
+                    ? "bg-blue-500 text-white shadow-md"
+                    : "hover:bg-gray-100 text-gray-700"
                 }`}
               >
                 {Icon && (
                   <Icon
                     size={18}
-                    className={`${isActive ? "text-white" : ""}`}
+                    className={`${isActive ? "text-white" : "text-gray-500"}`}
                   />
                 )}
                 <span className="capitalize">{label}</span>
@@ -40,7 +51,6 @@ export default function Sidebar() {
           })}
         </div>
       </div>
-      <AccountToggle />
     </div>
   );
 }
