@@ -8,9 +8,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
-import PelatihanBerlangsung from "./pelatihanBerlangsung";
-import TabelPegawai from "./tabelPegawai";
-import GrafikPelatihan from "./grafikPelatihan";
+import PelatihanBerlangsung from "./components/pelatihanBerlangsung";
+import TabelPegawai from "./components/tabelPegawai";
+import GrafikPelatihan from "./components/grafikPelatihan";
 
 export default function Page() {
   const filteredTraining = dataPelatihan.filter(
@@ -64,12 +64,12 @@ export default function Page() {
                   </div>
                 </Link>
                 <Link
-                  href="/manajemen-pegawai/tambah"
+                  href="/manajemen-pelatihan"
                   className="group bg-white hover:bg-blue-50 w-full sm:w-[240px] h-16 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
                 >
                   <div className="text-blue-600 font-medium flex items-center gap-2">
-                    <PlusCircle size={18} />
-                    Tambah Pegawai
+                    <ClipboardList size={18} />
+                    Manajemen Pelatihan
                     <ArrowRight
                       size={16}
                       className="group-hover:translate-x-1 transition-transform"
