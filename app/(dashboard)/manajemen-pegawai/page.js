@@ -3,7 +3,7 @@
 import { employees as data } from "@/constants";
 import { Search, Trash2, Pencil, PlusCircle, Eye } from "lucide-react";
 import { useState } from "react";
-import EmployeeDrawer from "@/app/(dashboard)/manajemen-pegawai/components/employeeDrawer";
+import EmployeeDrawer from "@/app/(dashboard)/manajemen-pegawai/components/employee-drawer";
 import Link from "next/link";
 
 const ITEMS_PER_PAGE = 7;

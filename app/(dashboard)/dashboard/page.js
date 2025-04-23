@@ -1,16 +1,15 @@
 import { dataPelatihan, employees } from "@/constants";
 import {
   Users,
-  PlusCircle,
   ClipboardList,
   BarChart3,
   Activity,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
-import PelatihanBerlangsung from "./components/pelatihanBerlangsung";
-import TabelPegawai from "./components/tabelPegawai";
-import GrafikPelatihan from "./components/grafikPelatihan";
+import PelatihanBerlangsung from "./components/pelatihan-berlangsung";
+import TabelPegawai from "./components/tabel-pegawai";
+import GrafikPelatihan from "./components/grafik-pelatihan";
 
 export default function Page() {
   const filteredTraining = dataPelatihan.filter(

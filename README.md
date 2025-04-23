@@ -2,37 +2,36 @@
 
 Sistem berbasis web untuk membantu Inspektorat Daerah Kabupaten Pati dalam merekap data pegawai serta mempermudah proses pemilihan pelatihan berdasarkan kebutuhan dan kriteria yang ditentukan.
 
+> _⚠️ **Catatan**: Saat ini aplikasi hanya menggunakan data statik. Belum ada koneksi ke basis data atau fitur autentikasi. Halaman login juga belum tersedia dan akan dikembangkan di tahap selanjutnya._
+
 ---
 
 ## 🚀 Fitur Utama
 
-- 📋 Rekapitulasi data pegawai
+- 📋 Rekapitulasi data pegawai (statik)
 - 🧠 Penilaian kebutuhan pelatihan per pegawai
 - 🗂️ Pemilihan jenis pelatihan berdasarkan kriteria tertentu
 - 📅 Manajemen jadwal pelatihan
-- 🔐 Login untuk admin dan pengguna internal
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-| Teknologi           | Keterangan                             |
-| ------------------- | -------------------------------------- |
-| Next.js             | Framework utama frontend               |
-| Tailwind CSS        | Styling modern & responsive            |
-| PostgreSQL          | Basis data utama                       |
-| Supabase (opsional) | Jika digunakan untuk auth atau storage |
-| Vercel / Netlify    | Untuk hosting (jika online)            |
+| Teknologi           | Keterangan                                  |
+| ------------------- | ------------------------------------------- |
+| Next.js             | Framework utama frontend                    |
+| Tailwind CSS        | Styling modern & responsive                 |
+| PostgreSQL          | Direncanakan untuk versi dinamis            |
+| Supabase (opsional) | Untuk pengelolaan data & auth (belum aktif) |
+| Vercel / Netlify    | Untuk hosting (jika online)                 |
 
 ---
 
 ## 📸 Cuplikan Tampilan (Screenshots)
 
-> _(Tambahkan gambar hasil tampilan di folder `public/assets/` lalu tampilkan di sini)_
-
 ### Dashboard
 
-![Dashboard](public/assets/dashboard.png)
+![Dashboard](public/assets/thumbnail.png)
 
 ---
 
@@ -67,8 +66,7 @@ http://localhost:3000
 
 ## 🔐 Catatan Akses
 
-- Role Admin: Akses penuh ke data & fitur
-- Role User: Akses terbatas untuk pengisian form & melihat hasil
+> _Saat ini belum tersedia sistem login maupun peran pengguna. Semua konten bersifat terbuka dan statik. Fitur ini akan ditambahkan di versi selanjutnya._
 
 ---
 

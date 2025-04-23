@@ -54,7 +54,6 @@ export default function TopBar() {
     "/dashboard": "Selamat Datang Kembali",
     "/manajemen-pegawai": "Manajemen Pegawai",
     "/manajemen-pelatihan": "Manajemen Pelatihan",
-    "/rekomendasi-pelatihan": "Rekomendasi Pelatihan",
     "/laporan-rekapitulasi": "Laporan & Rekapitulasi",
     "/pengaturan": "Pengaturan",
     "/profil-saya": "Profil Saya",

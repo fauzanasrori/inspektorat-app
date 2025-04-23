@@ -3,8 +3,8 @@
 import { dataPelatihan as data } from "@/constants";
 import { useState } from "react";
 import { PlusCircle } from "lucide-react";
-import TrainingData from "./components/trainingData";
-import TrainingForm from "./components/trainingForm";
+import TrainingData from "./components/training-data";
+import TrainingForm from "./components/training-form";
 
 export default function Page() {
   const [pelatihan, setPelatihan] = useState(data);

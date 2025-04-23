@@ -1,5 +1,5 @@
-import Sidebar from "@/components/sidebar";
-import TopBar from "@/components/topBar";
+import Sidebar from "@/components/side-bar";
+import TopBar from "@/components/top-bar";
 
 export default function Page({ children }) {
   return (
