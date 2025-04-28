@@ -167,16 +167,13 @@ export default function TopBar() {
                     <Settings size={16} className="text-gray-500" />
                     Pengaturan
                   </Link>
-                  <button
-                    onClick={() => {
-                      // Handle logout logic here
-                      console.log("Logout clicked");
-                    }}
+                  <Link
+                    href="/"
                     className="flex items-center gap-2 w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-50"
                   >
                     <LogOut size={16} className="text-red-500" />
                     Keluar
-                  </button>
+                  </Link>
                 </div>
               </div>
             )}
